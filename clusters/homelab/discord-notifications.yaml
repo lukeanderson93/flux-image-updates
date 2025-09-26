@@ -1,0 +1,17 @@
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Provider
+metadata:
+  name: discord
+  namespace: flux-system
+spec:
+  type: discord
+  secretRef:
+    name: discord-webhook-url
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: discord-webhook
+  namespace: default
+stringData:
+    address: "https://discord.com/api/webhooks/1421229089972293653/aUJdpKVQqLUeNcE4-Na647kRywKPSiEinwUmdmU4tGWlryTQB4G2bn8q_ZyqyixdPtx5"
