@@ -15,3 +15,18 @@ metadata:
   namespace: default
 stringData:
     address: "https://discord.com/api/webhooks/1421229089972293653/aUJdpKVQqLUeNcE4-Na647kRywKPSiEinwUmdmU4tGWlryTQB4G2bn8q_ZyqyixdPtx5"
+---
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Alert
+metadata:
+  name: flux-errors
+  namespace: flux-system
+spec:
+  providerRef:
+    name: discord
+  eventSeverity: info
+  eventSources:
+    - kind: Kustomization
+      name: "*"
+    - kind: HelmRelease
+      name: "*"
