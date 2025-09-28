@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: podinfo
+  namespace: flux-dependabot
+spec:
+  interval: 10m
+  timeout: 5m
+  chart:
+    spec:
+      chart: dependabot
+      version: "3.5.0"
+      sourceRef:
+        kind: HelmRepository
+        name: dependabot-repo
+        namespace: flux-system
+      interval: 5m
