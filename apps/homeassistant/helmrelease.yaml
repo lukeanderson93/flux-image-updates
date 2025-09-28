@@ -16,9 +16,9 @@ spec:
   values:
     persistence:
       enabled: true
-      accessMode: ReadWriteOnce
-      size: 5Gi
-      storageClass: ""
+#      accessMode: ReadWriteOnce
+#      size: 5Gi
+#      storageClass: ""
       existingClaim: "home-assistant-home-assistant-0"
 
     configuration:
