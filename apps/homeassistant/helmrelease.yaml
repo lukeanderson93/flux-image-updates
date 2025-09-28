@@ -20,7 +20,7 @@ spec:
 #      size: 5Gi
 #      storageClass: ""
       existingClaim: "home-assistant-home-assistant-0"
-      existingVolume: "pvc-7a707d26-684c-498d-9cbb-4033eeaf67fe"
+#      existingVolume: "pvc-7a707d26-684c-498d-9cbb-4033eeaf67fe"
 
     configuration:
       enabled: false
