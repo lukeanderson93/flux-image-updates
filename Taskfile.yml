@@ -8,8 +8,18 @@ tasks:
       - flux logs --follow --all-namespaces
 
   reconcile:
-    cmd: flux reconcile kustomization flux-system --with-source
+    cmds:
+      - flux reconcile kustomization flux-system --with-source
+      - flux reconcile helmrelease homeassistant -n home-assistant
 
-  # there's probably a better way to do this, but I am still learning, so this seems to work!
-  reconcile-homeassistant:
-    cmd: flux reconcile helmrelease homeassistant -n home-assistant
+  info:
+    cmds:
+      - flux get helmreleases -A
+      - flux get sources git -A
+      - flux get sources helm -A
+      - flux get kustomizations -A
+
+  check:
+    cmds:
+      - flux check --pre
+      - flux check
