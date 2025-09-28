@@ -19,10 +19,10 @@ spec:
       accessMode: ReadWriteOnce
       size: 5Gi
       storageClass: ""
-#      existingClaim: ""
+      existingClaim: "home-assistant-home-assistant-0"
 
     configuration:
-      enabled: true
+      enabled: false
 
     ingress:
       enabled: true
