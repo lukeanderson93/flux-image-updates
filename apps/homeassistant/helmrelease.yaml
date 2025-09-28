@@ -16,11 +16,9 @@ spec:
   values:
     persistence:
       enabled: true
-#      accessMode: ReadWriteOnce
-#      size: 5Gi
-#      storageClass: ""
-      existingClaim: "home-assistant-home-assistant-0"
-#      existingVolume: "pvc-7a707d26-684c-498d-9cbb-4033eeaf67fe"
+      # using existingClaim only works in deployment mode, not sure why, there's probably some good reason.
+      # just need to "unlink" the pv from the pvc by deleting the pvc with pv as retain.
+      existingVolume: "pvc-7a707d26-684c-498d-9cbb-4033eeaf67fe"
 
     configuration:
       enabled: false

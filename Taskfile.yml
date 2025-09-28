@@ -23,3 +23,7 @@ tasks:
     cmds:
       - flux check --pre
       - flux check
+
+  uninstall-homeassistant:
+    cmds:
+      - helm uninstall homeassistant -n home-assistant
