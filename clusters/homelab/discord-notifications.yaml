@@ -12,7 +12,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: discord-webhook-url
-  namespace: default
+  namespace: flux-system
 stringData:
     address: "https://discord.com/api/webhooks/1421229089972293653/aUJdpKVQqLUeNcE4-Na647kRywKPSiEinwUmdmU4tGWlryTQB4G2bn8q_ZyqyixdPtx5"
 ---
