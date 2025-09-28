@@ -3,16 +3,24 @@
 version: "3"
 
 tasks:
+  default:
+    desc: List all commands.
+    cmds:
+      - task --list-all
+
   logs:
+    desc: Flux logs.
     cmds:
       - flux logs --follow --all-namespaces
 
   reconcile:
+    desc: Reconcile flux.
     cmds:
       - flux reconcile kustomization flux-system --with-source
       - flux reconcile helmrelease homeassistant -n home-assistant
 
   info:
+    desc: Get some info from flux.
     cmds:
       - flux get helmreleases -A
       - flux get sources git -A
@@ -20,10 +28,12 @@ tasks:
       - flux get kustomizations -A
 
   check:
+    desc: Run flux checks.
     cmds:
       - flux check --pre
       - flux check
 
   uninstall-homeassistant:
+    desc: Uninstall homeassistant.
     cmds:
       - helm uninstall homeassistant -n home-assistant
