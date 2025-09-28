@@ -9,3 +9,7 @@ tasks:
 
   reconcile:
     cmd: flux reconcile kustomization flux-system --with-source
+
+  # there's probably a better way to do this, but I am still learning, so this seems to work!
+  reconcile-homeassistant:
+    cmd: flux reconcile helmrelease homeassistant -n home-assistant
