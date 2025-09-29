@@ -37,3 +37,18 @@ tasks:
     desc: Uninstall homeassistant.
     cmds:
       - helm uninstall homeassistant -n home-assistant
+
+  kubeseal-install:
+    desc: "Install kubeseal on mac"
+    cmds:
+      - brew install kubeseal
+
+  kubeseal-export-pub-key:
+    desc: "Export public key from kubeseal"
+    cmds:
+      - >
+        kubectl get secret \
+          --namespace flux-system \
+          --selector sealedsecrets.bitnami.com/sealed-secrets-key=active \
+          --output jsonpath='{.items[0].data.tls\.crt}' \
+        | base64 -d > pub-sealed-secrets.pem
