@@ -7,7 +7,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ./charts/big-mens
+      chart: ./helm/
       sourceRef:
         kind: GitRepository
         name: big-mens-charts
