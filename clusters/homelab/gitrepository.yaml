@@ -8,3 +8,5 @@ spec:
   url: https://github.com/lukeanderson93/big-mens
   ref:
     branch: master
+  secretRef:
+    name: flux-system
