@@ -7,4 +7,4 @@ spec:
   image: ghcr.io/lukeanderson93/big-mens
   interval: 1m
   secretRef:
-    name: ghcr-credentials
+    name: github-container-registry-credentials
