@@ -2,7 +2,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
   name: big-mens
-  namespace: flux-big-mens-dev
+  namespace: flux-system
 spec:
   image: ghcr.io/lukeanderson93/big-mens
   interval: 1m

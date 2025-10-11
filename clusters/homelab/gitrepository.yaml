@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: big-mens-charts
-  namespace: flux-big-mens-dev
+  namespace: flux-system
 spec:
   interval: 1m
   url: https://github.com/lukeanderson93/big-mens
