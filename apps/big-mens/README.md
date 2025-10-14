@@ -10,3 +10,10 @@ $ kubectl create secret docker-registry github-container-registry-credentials \
   --docker-password= \
   --dry-run=client \
   -o yaml | kubeseal --format=yaml --cert=pub-sealed-secrets.pem > apps/big-mens/github-container-registry-credentials-sealed.yaml
+
+
+$ kubectl create secret generic discord-token-secret \
+  --namespace flux-big-mens-dev \
+  --from-literal=token= \
+  --dry-run=client \
+  -o yaml | kubeseal --format=yaml --cert=pub-sealed-secrets.pem > apps/big-mens/discord-token-secret-sealed.yaml
