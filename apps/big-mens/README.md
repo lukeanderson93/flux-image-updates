@@ -17,3 +17,10 @@ $ kubectl create secret generic discord-token-secret \
   --from-literal=token= \
   --dry-run=client \
   -o yaml | kubeseal --format=yaml --cert=pub-sealed-secrets.pem > apps/big-mens/discord-token-secret-sealed.yaml
+
+$ kubectl create secret generic open-ai-api-key \
+  --namespace flux-big-mens-dev \
+  --dry-run=client \
+  -o yaml \
+  --from-literal=token= \
+  | kubeseal --format=yaml --cert=pub-sealed-secrets.pem > apps/big-mens/open-ai-api-key-sealed.yaml
