@@ -13,10 +13,14 @@ tasks:
     cmds:
       - flux logs --follow --all-namespaces
 
-  reconcile:
+  flux:reconcile:
     desc: Reconcile flux.
     cmds:
       - flux reconcile kustomization flux-system --with-source
+
+  flux:reconcile-homeassistant:
+    desc: Reconcile homeassitant
+    cmds:
       - flux reconcile helmrelease homeassistant -n home-assistant
 
   info:
@@ -38,12 +42,12 @@ tasks:
     cmds:
       - helm uninstall homeassistant -n home-assistant
 
-  kubeseal-install:
+  kubeseal:install:
     desc: "Install kubeseal on mac"
     cmds:
       - brew install kubeseal
 
-  kubeseal-export-pub-key:
+  kubeseal:export-pub-key:
     desc: "Export public key from kubeseal"
     cmds:
       - >
