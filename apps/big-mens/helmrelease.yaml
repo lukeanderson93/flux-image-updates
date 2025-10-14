@@ -12,12 +12,8 @@ spec:
         kind: GitRepository
         name: big-mens-charts
         namespace: flux-system
+      valuesFile: helm/dev-values.yaml
 #  values:
 #    image: "ghcr.io/lukeanderson93/big-mens:0.0.4"
 #    imagePullSecrets:
 #      - name: github-container-registry-credentials
-
-  valuesFrom:
-    - kind: GitRepository
-      name: big-mens-charts
-      valuesKey: helm/dev-values.yaml
