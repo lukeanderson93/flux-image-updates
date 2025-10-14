@@ -14,6 +14,5 @@ spec:
         namespace: flux-system
       reconcileStrategy: Revision
   values:
-    image: "ghcr.io/lukeanderson93/big-mens:0.0.4"
     imagePullSecrets:
       - name: github-container-registry-credentials
