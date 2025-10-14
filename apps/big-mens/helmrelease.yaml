@@ -12,7 +12,7 @@ spec:
         kind: GitRepository
         name: big-mens-charts
         namespace: flux-system
-#  values:
-#    image: "ghcr.io/lukeanderson93/big-mens:0.0.4"
-#    imagePullSecrets:
-#      - name: github-container-registry-credentials
+  values:
+    image: "ghcr.io/lukeanderson93/big-mens:0.0.4"
+    imagePullSecrets:
+      - name: github-container-registry-credentials
