@@ -1,0 +1,13 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: open-ai-api-key
+  namespace: flux-big-mens-prod
+spec:
+  encryptedData:
+    token: AgCBlDVUOBR3sc918jbGrkG/oHxu1arR+DcuWzHXcYCIW3kZTOzELSw8qetIEBgBdJIK0cIHqif3YvL3A2inwCqhe7ALFLIwy2Tsij5o0gfdv9WKtAWKapCFCePoXr64gDTBoSOgH2h8MrOqadKtCZg/hyrUas5cwhG0og99UoQXo952znzuewIXHSi4tAJ83e926APIrPJvrb31ZiUuPiWyVq3gQsl1a/iMOkS+/HZl47GyQOKPDdvpiPdxc+W5UxXAalyO/zBQZ9j93f/Z7dkb/49vtieVeXYx1kxm7oVvXFk3wbcwI5ior8Ttu6azbgrtEOYRTHMIYcsv/6Q81TVwcBTDywf60ew45094CV+qkt89p2Ya2SG2Wi4PVJOoT6Y92BxodiTdh4qR6Ee8W9hpXdojdDdCS8VUAyqzNsTJD85qmw4GnQX55Q59hYDzMxNYpS5X2cDdAx3Siymf8rWmg1zn3W1bqHhYqQIVz534cGbsQPPTvLW6cvElXi08x+WuiWH8+H7DdYszaijGMBjwb3xWI/TSxkDOkGbM0fI5vHnJnQrIbcVm3OBCqP1+ntRy/WKU2UnMFl7HvXRgrGcXsWGYzuN1PKQI7zF4IZAFjHQ/XaQ6bEwQ4Vu7oQkPxaFDeE99H9IsIOmlsk9VHLjxpwhtZSFs0bY2ELQeRKPP66u4BFmPCHysMcowEzw3XCYy6JYWOEsPT9M6ZpyLj0rw5iNOMogh7crYAqgOjuyL3uIimDzI/Nd+bUAL6lfCPO89j0VQR5+RNLHs0rVtgxWQnbWiWrJaaOLfHGT1egiX1iB+Bu9sQdpxiQgpw9gy/e9clLxvN8M1UxjRW/qQhdHm6OfTE/zo0vPGpXM/xA6A5YOHncV0g5CfMvIZH2yxp7/ur6CCL3rVDVoSa/kUtu77p7F8og==
+  template:
+    metadata:
+      name: open-ai-api-key
+      namespace: flux-big-mens-prod

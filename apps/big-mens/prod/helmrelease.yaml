@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: big-mens
-  namespace: flux-big-mens-dev
+  namespace: flux-big-mens-prod
 spec:
   interval: 5m
   chart:
@@ -18,20 +18,20 @@ spec:
 
     image: "ghcr.io/lukeanderson93/big-mens:0.0.9"
 
-    bigBotEnvironment: "development"
+    bigBotEnvironment: "production"
 
     discord:
-      bigMensRoleId: "1004746165251747902"
-      roleAssignmentChannelId: "1001933604491898933"
-      shootingStarsChannelId: "1320029240346808360"
-      twitchLiveChannelId: "1320345642165473300"
+      bigMensRoleId: "624716334197899275"
+      roleAssignmentChannelId: "1017022882766921738"
+      shootingStarsChannelId: "1207382375202553876"
+      twitchLiveChannelId: "1130174410641391686"
 
     pgweb:
       ingress:
         enabled: true
         className: traefik
         hosts:
-          - host: dev-pgweb.bigbot.k8s.lukeanderson.co.uk
+          - host: prod-pgweb.bigbot.k8s.lukeanderson.co.uk
             paths:
               - path: /
                 pathType: Prefix
