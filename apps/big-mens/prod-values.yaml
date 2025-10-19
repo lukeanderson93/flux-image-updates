@@ -1,0 +1,31 @@
+image: "ghcr.io/lukeanderson93/big-mens:0.0.6"
+
+bigBotEnvironment: "production"
+
+discord:
+  bigMensRoleId: "624716334197899275"
+  roleAssignmentChannelId: "1017022882766921738"
+  shootingStarsChannelId: "1207382375202553876"
+  twitchLiveChannelId: "1130174410641391686"
+
+pgweb:
+  ingress:
+    enabled: true
+    className: traefik
+    hosts:
+      - host: prod-pgweb.bigbot.k8s.lukeanderson.co.uk
+        paths:
+          - path: /
+            pathType: Prefix
+  env:
+    - name: PGWEB_DATABASE_URL
+      valueFrom:
+        secretKeyRef:
+          name: pgweb-database-url-secret
+          key: PGWEB_DATABASE_URL
+
+postgresql:
+  auth:
+    database: bigmens
+    username: bigmens
+    password: bigmens
