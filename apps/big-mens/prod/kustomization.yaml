@@ -6,3 +6,4 @@ resources:
   - discord-token-secret-sealed.yaml
   - open-ai-api-key-sealed.yaml
   - github-container-registry-credentials-sealed.yaml
+  - helmrelease.yaml
