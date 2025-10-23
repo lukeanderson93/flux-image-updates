@@ -10,5 +10,5 @@ spec:
   eventSeverity: info
   eventSources:
     - kind: HelmRelease
-      name: big-mens
+      name: "*"
       namespace: flux-big-mens-prod
