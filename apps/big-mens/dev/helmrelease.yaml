@@ -15,17 +15,13 @@ spec:
   values:
     imagePullSecrets:
       - name: github-container-registry-credentials
-
-    image: "ghcr.io/lukeanderson93/big-mens:0.0.12" # {"$imagepolicy": "flux-system:big-mens"}
-
+    image: "ghcr.io/lukeanderson93/big-mens:0.0.16" # {"$imagepolicy": "flux-system:big-mens"}
     bigBotEnvironment: "development"
-
     discord:
       bigMensRoleId: "1004746165251747902"
       roleAssignmentChannelId: "1001933604491898933"
       shootingStarsChannelId: "1320029240346808360"
       twitchLiveChannelId: "1320345642165473300"
-
     pgweb:
       ingress:
         enabled: true
@@ -41,7 +37,6 @@ spec:
             secretKeyRef:
               name: pgweb-database-url-secret
               key: PGWEB_DATABASE_URL
-
     postgresql:
       auth:
         database: bigmens
