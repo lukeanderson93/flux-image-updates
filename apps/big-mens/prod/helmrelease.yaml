@@ -15,7 +15,7 @@ spec:
   values:
     imagePullSecrets:
       - name: github-container-registry-credentials
-    image: "ghcr.io/lukeanderson93/big-mens:0.0.18" # {"$imagepolicy": "flux-system:big-mens"}
+    image: "ghcr.io/lukeanderson93/big-mens:0.0.19" # {"$imagepolicy": "flux-system:big-mens"}
     bigBotEnvironment: "production"
     discord:
       bigMensRoleId: "624716334197899275"
