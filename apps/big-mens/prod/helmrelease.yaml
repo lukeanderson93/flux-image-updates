@@ -22,12 +22,21 @@ spec:
       roleAssignmentChannelId: "1017022882766921738"
       shootingStarsChannelId: "1207382375202553876"
       twitchLiveChannelId: "1130174410641391686"
+    redisinsight:
+      ingress:
+        enabled: true
+        className: traefik
+        hosts:
+          - host: redisinsight.prod.bigmens.k8s.lukeanderson.co.uk
+            paths:
+              - path: /
+                pathType: Prefix
     pgweb:
       ingress:
         enabled: true
         className: traefik
         hosts:
-          - host: prod-pgweb.bigbot.k8s.lukeanderson.co.uk
+          - host: pgweb.prod.bigmens.k8s.lukeanderson.co.uk
             paths:
               - path: /
                 pathType: Prefix
