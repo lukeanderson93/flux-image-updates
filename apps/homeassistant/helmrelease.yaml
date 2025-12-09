@@ -26,7 +26,7 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: homeassistant.k8s.lukeanderson.co.uk
+        - host: homeassistant.k8s.internal
           paths:
             - path: /
               pathType: ImplementationSpecific
